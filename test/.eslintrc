@@ -1,0 +1,19 @@
+{
+  "env": {
+    "node": true,
+    "mocha": true
+  },
+  "rules": {
+    "prefer-arrow-callback": "off",
+    "func-names": "off",
+    "space-before-function-paren": "off",
+    "no-unused-expressions": "off",
+    "global-require": "off",
+    "no-underscore-dangle": "off"
+  },
+  "globals": {
+    "rewire": true,
+    "expect": true,
+    "sinon": true
+  }
+}
