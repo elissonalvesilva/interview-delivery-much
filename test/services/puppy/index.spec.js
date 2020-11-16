@@ -34,7 +34,7 @@ describe('PuppyService', () => {
   });
 
   it('Should return a response from puppy service', async () => {
-    sandbox.stub(PuppyRequestFormatter, 'request').returns(
+    sandbox.stub(PuppyRequestFormatter, 'format').returns(
       'http://www.recipepuppy.com/api/?i=a&q=b',
     );
 
@@ -52,7 +52,7 @@ describe('PuppyService', () => {
   });
 
   it('Should return a error response from puppy service', async () => {
-    sandbox.stub(PuppyRequestFormatter, 'request').returns(
+    sandbox.stub(PuppyRequestFormatter, 'format').returns(
       'http://www.recipepuppy.com/api/?i=a&q=b',
     );
 

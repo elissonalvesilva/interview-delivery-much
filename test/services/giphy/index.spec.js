@@ -5,7 +5,7 @@ const Cache = require('../../../utils/cache');
 const RedisClient = require('../../../clients/redis');
 const logger = require('../../../utils/logger');
 
-describe.only('GiphyService', () => {
+describe('GiphyService', () => {
   let sandbox;
   let giphyResponse;
   beforeEach(() => {
