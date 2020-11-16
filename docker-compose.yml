@@ -1,0 +1,20 @@
+version: "2.1"
+services:
+  app:
+    container_name: delivery-api
+    build:
+      context: .
+      dockerfile: docker/development/Dockerfile
+    depends_on:
+      - redis
+    ports:
+      - "4002:4002"
+    volumes:
+      - .:/usr/src/app
+    command: nodemon server.js
+  redis:
+    image: redis:4.0-alpine
+    volumes:
+      - ./data/redis:/data
+    ports:
+      - "6379:6379"

@@ -1,0 +1,23 @@
+{
+  "port": 4002,
+  "host": "0.0.0.0",
+  "log": "info",
+  "timezone": "America/Sao_Paulo",
+  "api": {
+    "puppy": {
+      "host": "http://www.recipepuppy.com/api/",
+      "headers": {
+        "Host": "www.recipepuppy.com/api/"
+      }
+    },
+    "giphy": {
+      "host": "https://api.giphy.com/v1/gifs/search",
+      "headers": {
+        "Host": "api.giphy.com/v1/gifs/search"
+      },
+      "failedRequestsThreshold": 5,
+      "serviceTimeout": 2000,
+      "retryTimeout": 2000
+    }
+  }
+}
