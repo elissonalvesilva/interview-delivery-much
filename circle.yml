@@ -1,0 +1,15 @@
+version: 2
+executorType: machine
+jobs:
+  build:
+    workDir: ~/src
+    steps:
+      - type: checkout
+      - type: shell
+        name: Setup Delivery API
+        command: |
+          make build
+      - type: shell
+        name: Test Delivery API Code
+        command: |
+          make test
